@@ -6,3 +6,31 @@
     flex-direction: column;
   }
 }
+
+@font-face {
+  font-family: 'ChonkyPixels';
+  src: url('/fonts/chonkypixels/ChonkyPixels.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT New Pixel';
+  src: url('/fonts/that-that-new-pixel-font-1752033450-0/thatthatnewpixelfamilytest-square.otf')  format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT New Pixel Round';
+  src: url('/fonts/that-that-new-pixel-font-1752033450-0/thatthatnewpixelfamilytest-round.otf')  format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neocosmic';
+  src: url('/fonts/Necosmic_Demo/Necosmic-PersonalUse.otf')  format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
