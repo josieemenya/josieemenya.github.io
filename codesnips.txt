@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Component Example</title>
+</head>
+<body>
+
+  <my-card></my-card>
+
+  <script>
+    class MyCard extends HTMLElement {
+      connectedCallback() {
+        this.innerHTML = `
+          <div style="border: 1px solid #ccc; padding: 10px; border-radius: 8px;">
+            <h3>Hello from MyCard</h3>
+            <p>This is a reusable component!</p>
+          </div>
+        `;
+      }
+    }
+
+    customElements.define('my-card', MyCard);
+  </script>
+
+</body>
+</html>

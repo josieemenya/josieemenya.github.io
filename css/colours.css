@@ -1,0 +1,31 @@
+
+/* CSS HEX */
+:root {
+  --violet-jtc: #5d2a42ff;
+  --eggshell: #f1e9daff;
+  --slate-gray: #718f94ff;
+  --light-coral: #ef767aff;
+  --smoky-black: #141301ff;
+
+  /* CSS HSL */
+  --violet-jtc: hsla(332, 38%, 26%, 1);
+  --eggshell: hsla(39, 45%, 90%, 1);
+  --slate-gray: hsla(189, 14%, 51%, 1);
+  --light-coral: hsla(358, 79%, 70%, 1);
+  --smoky-black: hsla(57, 90%, 4%, 1);
+
+  /* CSS HEX */
+  --eerie-black: #191716ff;
+  --black-bean: #440d0fff;
+  --lavender-web: #cfcfeaff;
+  --paynes-gray: #5d737eff;
+  --cerulean: #477998ff;
+
+  /* CSS HSL */
+  --eerie-black: hsla(20, 6%, 9%, 1);
+  --black-bean: hsla(358, 68%, 16%, 1);
+  --lavender-web: hsla(240, 39%, 86%, 1);
+  --paynes-gray: hsla(200, 15%, 43%, 1);
+  --cerulean: hsla(203, 36%, 44%, 1);
+}
+

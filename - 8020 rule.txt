@@ -1,16 +1,10 @@
-# www.robotstxt.org/
-
-# Allow crawling of all content
-User-agent: *
-Disallow:
-
- - 80/20 rule
+ - 80/20 rule 
  - kiss
 
 
-website :
+website : 
 
-	-
+	- 
 
 
 layout - user friendly
@@ -19,9 +13,9 @@ layout - user friendly
 	- size and spacing lookout, use the number 4, any size or space used must be divisible by 4
 	- consistency
 
-	- component based design :
+	- component based design : 
 		- layout, fonts, colours, icons, buttons
-
+	
 
 
 	- dark mode toggle
@@ -32,31 +26,31 @@ layout - user friendly
 			- after getting header right, make body font the same size, identify 				important part of the website and make them bigger
 			- legality over aesthetics
 			- when in doubt use these fonts : inter, Montserrat, dm sans, raleway, 				Roboto
-
+			
 
 			--TT new pixel, Suisse int'l
-	colours :
+	colours : 
 		- at least 4 incl. b/w
 		- less is more
 		- repeat over and over
 		- stick w/ b + w and add an accent for more personality - buttons, borders, 		gradient
 		- play with hsl code
 
-	images :
+	images : 
 		- icons + images make things easier to understand
 		- iconfinder, icons8, pexels - free icons
 		- unsplash, freepik, flaticon
 		- less is more be intentful
 
 
-	content :
+	content : 
 		- content is king
 
 
 
-design :
+design : 
 
-	audience : job req :
+	audience : job req : 
 
 			- skill, professionalism, initiative
 			- clean, functional design : mobile support
@@ -66,7 +60,7 @@ design :
  			- contact info : email, linkedin, GitHub, contact form maybe
 			- nice to hav: resume download, testimonials, blog?
 
-
+			
 			Gameplay UI  SWE:
 			- Concise technical summary: What is it? What were you responsible for?
 
@@ -86,17 +80,17 @@ GIFs/videos/screenshots – critical for gameplay/UI
 
 			- How you structured your code (e.g., ECS, MVC)
 
-💡 						- 1–3 polished, technically rich projects are enough if they're detailed and well-presented.
-
+💡 						- 1–3 polished, technically rich projects are enough if they're detailed and well-presented. 
+			
 	sell me :
 
 
 
 design stdep : think, plan research
 		- make a repeatable design
-		- break page into sections
+		- break page into sections 
 		- hero section : answer : problem you are solving - heading, short para, picture, call to action
 		- explain what you're selling
-
+		
 website : 80% design, 20% code
 code
