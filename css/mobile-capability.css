@@ -15,25 +15,18 @@
 }
 
 @font-face {
-  font-family: 'TT New Pixel';
-  src: url('/fonts/that-that-new-pixel-font-1752033450-0/thatthatnewpixelfamilytest-square.otf')  format('opentype');
+  font-family: 'Agraham';
+  src: url('/fonts/agraham/Agraham.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'TT New Pixel Round';
-  src: url('/fonts/that-that-new-pixel-font-1752033450-0/thatthatnewpixelfamilytest-round.otf')  format('opentype');
+  font-family: 'Greater Theory';
+  src: url('/fonts/greater-theory/GreaterTheory.otf');
   font-weight: normal;
-  font-style: normal;
 }
 
-@font-face {
-  font-family: 'Neocosmic';
-  src: url('/fonts/Necosmic_Demo/Necosmic-PersonalUse.otf')  format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 .socials {
   color: var(--eggshell);
@@ -52,4 +45,20 @@
   color: var(--slate-gray);
   transform: scale(1.1); /* Slight zoom */
   filter: brightness(1.2); /* Slight lightening */
+}
+
+
+
+
+
+
+@keyframes yellow_hover {
+  0%      { background-color: hsla(38, 70%, 65%, 0); }
+  12%     { background-color: hsla(38, 70%, 65%, .2); }
+  25%     { background-color: hsla(38, 70%, 65%, .25); }
+  37%     { background-color: hsla(38, 70%, 65%, .37); }
+  50.000%     { background-color: hsla(38, 70%, 65%, .5); }
+  62%      {background-color: hsla(38, 70%, 65%, .62); }
+  75.000%     { background-color: hsla(38, 70%, 65%, .75); }
+  100.00%     { background-color: hsla(38, 70%, 65%, .85); }
 }

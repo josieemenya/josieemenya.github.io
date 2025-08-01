@@ -27,5 +27,21 @@
   --lavender-web: hsla(240, 39%, 86%, 1);
   --paynes-gray: hsla(200, 15%, 43%, 1);
   --cerulean: hsla(203, 36%, 44%, 1);
+
+
+  /* CSS HEX */
+  --oxford-blue: #001D4Aff;
+  --lavender-web: #eae8ffff;
+  --dark-cyan: #3e8989ff;
+  --earth-yellow: #e5b769ff;
+  --celadon: #bbdb9bff;
+
+  /* CSS HSL */
+  --smoky-black: hsla(53, 67%, 5%, 1);
+  --lavender-web: hsla(245, 100%, 95%, 1);
+  --dark-cyan: hsla(180, 38%, 39%, 1);
+  --earth-yellow: hsla(38, 70%, 65%, 1);
+  --celadon: hsla(90, 47%, 73%, 1);
 }
+
 
