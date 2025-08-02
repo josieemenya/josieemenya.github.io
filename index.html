@@ -33,8 +33,18 @@
     background-color: var(--lavender-web); /* fallback */
     background-repeat: repeat;
     background-size: auto, cover;
-
   }
+
+  footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:68px;
+    width:100%;
+    background:var(--dark-cyan);
+    border-radius: 8px 8px 0 0;
+  }
+
 
   p{
       text-align: center !important;
@@ -42,12 +52,12 @@
       font-family: 'Neocosmic', sans-serif;
   }
   .outline-text {
-            color: white;
-            text-shadow:
-              -1px -1px 0 black,
-              1px -1px 0 black,
-              -1px  1px 0 black,
-              1px  1px 0 black;
+    color: white;
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px  1px 0 black,
+      1px  1px 0 black;
   }
 
   nav {
@@ -95,7 +105,7 @@
   <!-- Add your site or application content here -->
 
 
-  <nav style="position: sticky; top: 0; z-index: 100; background-color: var(--dark-cyan); border-radius: 8px;">
+  <nav style="position: sticky; top: 0; z-index: 100; background-color: var(--dark-cyan); border-radius: 0 0 8px 8px;" class="nav-bar">
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 24px;">
 
       <div style="font-family: 'Greater Theory', sans-serif; font-size: 23px; color: var(--celadon)" >Josephine Emenya</div>
@@ -112,18 +122,16 @@
   </nav>
 
 
-  <div>
-    <h1><a href="https://www.linkedin.com/in/josieemenya/" target="_blank" style="color: var(--oxford-blue); text-decoration: none; font-size: 64px; margin: 28px" >my name.</a></h1>
+  <div style="background-image: url('img/img.png'); background-size: auto; background-repeat: no-repeat; background-position: top left; height: 70%;">
+
+    <div style="position: absolute; bottom: 20px; left: 20px; background-color: rgba(0, 0, 0, 0.6); color: white; padding: 20px; border-radius: 8px; max-width: 300px;">
+      <h2 style="margin: 0;">Your Heading</h2>
+      <p style="margin: 5px 0 0;">Some overlay text goes here.</p>
+    </div>
+
+    <h1><a href="https://www.linkedin.com/in/josieemenya/" target="_blank" style="color: var(--lavender-web); text-decoration: none; font-size: 64px; margin: 28px" >my name.</a></h1>
+
     <p style="color: var(--dark-cyan); text-decoration: none; font-size: 16px; margin: 28px; float: left"> wasssssssssssssssssssssup</p>
-    <img src="img/heart.jpg" style="float: right; border-radius: 8px">
-  </div>
-
-
-
-    <div id = 'insert' style="padding:  24px;">
-    <div style="float: left">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, sapien non fringilla cursus, augue libero cursus erat, at ultricies purus sapien sed lacus. Curabitur in nulla sed enim egestas bibendum. Praesent bibendum, libero at dictum tincidunt, sapien elit faucibus sapien, non facilisis tortor odio nec turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis nec est sed lorem tincidunt commodo. Nam auctor, nisl vel dapibus pretium, nulla mauris gravida sapien, in ultricies nisl erat ut risus. Integer rutrum, elit at dignissim convallis, ipsum sapien consectetur orci, id dapibus libero arcu a augue. Sed dictum, lectus sed tempor efficitur, dolor magna efficitur nunc, vitae lacinia odio augue a nisl. Fusce a faucibus risus. Nam consequat, urna nec tempor faucibus, magna orci fermentum ligula, nec dictum elit erat ut magna. Curabitur laoreet mi eu turpis blandit, at commodo lacus lobortis. Integer posuere lobortis lorem, at pulvinar augue fermentum at. Vivamus suscipit risus ac enim pulvinar, sed luctus lorem mattis. Quisque facilisis magna nec justo ornare, a blandit nunc blandit. Praesent nec metus et odio aliquet accumsan. Donec sit amet blandit lorem, id pulvinar elit. Sed nec dolor scelerisque, bibendum velit sed, vehicula nibh. Morbi ut elit sed nunc tincidunt mattis. Aliquam erat volutpat. Nulla facilisi. Phasellus bibendum diam in facilisis posuere. Vestibulum at nulla fermentum, hendrerit eros eu, posuere purus. Nullam semper, ipsum at convallis mattis, urna urna fermentum sapien, ut tincidunt elit sapien vel augue. Mauris sodales, magna nec viverra congue, leo nibh dapibus justo, non gravida ipsum purus at libero. Donec vel justo a nunc vulputate dignissim. Etiam et lacinia massa. Vivamus nec erat at est tincidunt commodo in sed velit. In sit amet tortor quis sapien pulvinar pretium at nec lectus. Curabitur condimentum, metus at pulvinar dignissim, justo magna bibendum lorem, et lacinia nisl nibh nec elit. Donec suscipit rutrum leo non tincidunt. Mauris eget erat a justo volutpat ornare. Nam et magna nec elit egestas consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam et metus nec nulla luctus egestas. Suspendisse potenti. Nullam in malesuada arcu. Quisque at tortor a nibh efficitur consectetur. Donec eget lorem lorem. Morbi congue blandit leo, non porttitor leo luctus ut. Suspendisse at erat vel sapien gravida convallis. Vivamus eu odio ut lorem efficitur dignissim. Sed rhoncus quam vel lorem vestibulum, sed tristique mauris varius. Proin facilisis ipsum sed augue gravida, sed malesuada magna lacinia. Nulla facilisi. Sed vehicula justo vitae erat sollicitudin, at maximus neque aliquam. Vestibulum quis tellus et dolor facilisis cursus nec a nibh. Praesent rhoncus, ex at pulvinar porttitor, elit elit condimentum urna, id viverra elit libero ut erat. Donec vestibulum, elit sed efficitur tristique, ex magna tincidunt mauris, in hendrerit purus ex nec leo. Morbi blandit convallis turpis, nec dignissim eros dapibus in.
-    </div>
-    </div>
   </div>
 
 
@@ -135,12 +143,12 @@
 
 </body>
 
-<footer>
+<footer class="footer">
   <div style="text-align: center;">
 
-    <a class='socials' style="text-decoration: none" href="https://www.linkedin.com/in/josieemenya/"> <img src="ico/socialicons/linkedin_ico.svg" alt="linkedin" height="60" width="60"> </a>
-    <a class='socials' style="text-decoration: none" href="https://github.com/josieemenya"> <img src="ico/socialicons/github_icon.svg" alt="github" height="60" width="60"> </a>
-    <a class='socials' style="text-decoration: none" href="https://joomen.itch.io/"> <img src="ico/socialicons/itchio_icon.svg" alt="itchio" height="60" width="60"> </a>
+    <a class='socials' id= 'linkedin' style="text-decoration: none" href="https://www.linkedin.com/in/josieemenya/" target="_blank"> <img src="ico/socialicons/icons8-linkedin.svg" alt="linkedin" height="60" width="60"> </a>
+    <a class='socials' style="text-decoration: none" href="https://github.com/josieemenya" target="_blank"> <img src="ico/socialicons/icons8-github%20(1).svg" alt="github" height="60" width="60"> </a>
+    <a class='socials' style="text-decoration: none" href="https://joomen.itch.io/" target="_blank"> <img src="ico/socialicons/icons8-itch-io.svg" alt="itchio" height="60" width="60"> </a>
     <!-- maybe add leetcode + twitter in the future-->
   </div>
 </footer>
