@@ -65,15 +65,15 @@
 
 
 
-@keyframes yellow_hover {
-  0%      { background-color: hsla(38, 70%, 65%, 0); }
-  12%     { background-color: hsla(38, 70%, 65%, .2); }
-  25%     { background-color: hsla(38, 70%, 65%, .25); }
-  37%     { background-color: hsla(38, 70%, 65%, .37); }
-  50.000%     { background-color: hsla(38, 70%, 65%, .5); }
-  62%      {background-color: hsla(38, 70%, 65%, .62); }
-  75.000%     { background-color: hsla(38, 70%, 65%, .75); }
-  100.00%     { background-color: hsla(38, 70%, 65%, .85); }
+@keyframes blue_hover {
+  0%      { background-color: hsla(90, 47%, 73%, 0); }
+  12%     { background-color: hsla(90, 47%, 73%, .2); }
+  25%     { background-color: hsla(90, 47%, 73%, .25); }
+  37%     { background-color: hsla(90, 47%, 73%, .37); }
+  50.000%     { background-color: hsla(90, 47%, 73%, .5); }
+  62%      {background-color: hsla(90, 47%, 73%, .62); }
+  75.000%     { background-color: hsla(90, 47%, 73%, .75); }
+  100.00%     { background-color: hsla(90, 47%, 73%, .85); }
 }
 
 @keyframes yellow_fade {

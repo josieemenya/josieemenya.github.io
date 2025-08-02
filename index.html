@@ -95,11 +95,20 @@
 
 
   nav li a:hover {
-    animation: yellow_hover .25s ease-in-out forwards;
+
+    text-shadow:
+      -1px -1px 0 var(--paynes-gray),
+      1px -1px 0 var(--paynes-gray),
+      -1px  1px 0 var(--paynes-gray),
+      1px  1px 0 var(--paynes-gray);
+
+    animation: blue_hover .25s ease-in-out forwards;
     border-radius: 8px; /* makes corners rounded */
     font-size: 18px;
     transition: font-size 0.3s ease;
-    padding: 10px 24px; /
+    padding: 10px 24px;
+
+
   }
 
 
@@ -128,14 +137,14 @@
     </div>
   </nav>
 
-  <div style="background-image: url('img/img.png'); background-size: auto; background-repeat: no-repeat; background-position: top left; height: 70%;">
+  <div style="background-image: url('img/img_2.png'); background-size: auto; background-repeat: no-repeat; background-position: top left; height: 70%;">
 
-    <div class="content" style="position: absolute; margin: 28px;  background-color: rgba(0, 0, 0, 0.6); color: white; width:30%; height: 60%; border-radius: 8px; top: 120px; background-position:  top left;" >
+    <div class="content" style="position: absolute; margin: 28px;  background-color: rgba(0, 0, 0, 0.8); color: white; width:30%; height: 60%; border-radius: 8px; top: 120px; background-position:  top left;" >
       <h1 style=" margin: 28px;"><a href="https://www.linkedin.com/in/josieemenya/" target="_blank" style="color: var(--lavender-web); text-decoration: none; font-size: 44px;" >Hello World! I am <span style="display: block; color: var(--celadon)">Josephine Emenya</span></a></h1>
       <h3 style="color: var(--lavender-web); text-decoration: none; margin: 28px; float: left; position: relative; font-size: 32px;"> Aspiring Software Developer</h3>
-      <button class='focus-button' style="color: var(--eerie-black); width:180px; margin: 28px; background-color: var(--earth-yellow); padding: 12px 20px; box-sizing: border-box; border-radius: 8px; cursor:pointer" onclick="location.href='#section2'">All About Me</button>
+      <button class='focus-button' style="color: var(--eerie-black); width:180px; margin: 28px; background-color: var(--paynes-gray); padding: 12px 20px; box-sizing: border-box; border-radius: 8px; cursor:pointer" onclick="location.href='#section2'">All About Me</button>
       <br>
-      <button class='focus-button' onclick="downloadCV()" style="width:180px; margin: 28px; background-color: var(--earth-yellow); color: var(--eerie-black); padding: 12px 20px; box-sizing: border-box; border-radius: 8px; cursor:pointer">Download CV/Resume</button>
+      <button class='focus-button' onclick="downloadCV()" style="width:180px; margin: 28px; background-color: var(--paynes-gray); color: var(--eerie-black); padding: 12px 20px; box-sizing: border-box; border-radius: 8px; cursor:pointer">Download CV/Resume</button>
     </div>
 
 
@@ -148,11 +157,14 @@
     <div style="display: flex; align-items: center;">
       <section style="float: left">
         <p style="font-size: 24px; color: var(--lavender-web)" >
-          I am a graduate programmer based in London, UK.
+          Graduate student and hands-on software developer who loves turning ideas into playable, testable, buildable things.
+          Primarily working with C++ and Unreal Engine 5, I’m also constantly exploring new frameworks: from crafting retro-inspired games in PICO-8 to experimenting with Godot and prototyping roguelikes with low-level frameworks.
+          My daily work is fueled by curiosity and the drive to learn through doing, whether that means building a text-based game engine from scratch or trying out a completely new technology.
+          I’m passionate about creating engaging experiences, solving complex problems, and collaborating with others who share a love for code and creativity.
         </p>
       </section>
       <section style="float: right">
-        <img src="img/profile.jpg" style='width: 36%; height: 36%; border-radius: 60%; bottom: 30px; float:right; border-color: var(--earth-yellow)' alt="heart">
+        <img src="img/profile.jpg" style='width: 60%; height: 60%; border-radius: 60%; bottom: 30px; float:right; border-color: var(--earth-yellow)' alt="heart">
       </section>
     </div>
   </section>
@@ -160,15 +172,43 @@
 
 
   <section id="section3" style="height:40%; background-color: var(--eerie-black); padding: 24px;">
-    <h2 style="color: var(--earth-yellow); font-family: 'Greater Theory', sans-serif">Get in Touch</h2>
+    <h2 style="color: var(--celadon); font-family: 'Greater Theory', sans-serif">Get in Touch:</h2>
+    <div style="  width: 300px;
+      padding: 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: white;
+      font-family: 'LeagueScript',sans-serif;
+    ">
     <contact-form>
-      <input style="width: 120px" type="text" placeholder="Subject" id="subject">
+      <h5 style="font-family: inherit; color: inherit">Subject of Message:
+        <input style="width: 120px" type="text" placeholder="Subject" id="subject">
+      </h5>
       <br>
-      <textarea style="width: 120px" placeholder="Body Of Email" id="body"></textarea>
-      <br>
-      <button type="submit" id="button">Send Me an Email!</button>
-    </contact-form>
+      <h5 style="font-family: inherit; color: inherit; display: inline">
+        Content of Message:
+        <textarea style="width: 120px" placeholder="Body Of Email" id="body"></textarea>
+      </h5>
 
+      <br>
+      <button style='padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: var(--paynes-gray);
+        color: var(--lavender-web);
+        font-weight: bold;
+        cursor: pointer;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);' type="submit" id="button">
+        Send Me an Email!
+      </button>
+    </contact-form>
+    </div>
   </section>
 
 

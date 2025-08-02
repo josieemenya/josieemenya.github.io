@@ -9,7 +9,7 @@ class ContactForm extends HTMLElement {
 
     function sendEmail() {
 
-      window.location.href = `mailto:redacted@gmail.com?subject=${encodeURIComponent(subject.value)}&body=${encodeURIComponent(body.value)}`;
+      window.location.href = `mailto:josieemenya@gmail.com?subject=${encodeURIComponent(subject.value)}&body=${encodeURIComponent(body.value)}`;
     }
 
     button.addEventListener("click", sendEmail);
