@@ -64,9 +64,7 @@
 }
 
 .nav-bar {
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: all 0.6s ease-out;
+
 }
 
 .nav-bar.animate {
@@ -87,4 +85,13 @@
   transform: translateY(0);
 }
 
+.content {
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: all 0.6s ease-out;
+}
 
+.content.animate {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -41,6 +41,7 @@ customElements.define('project-card', ProjectCard);
 window.onload = function () {
   document.querySelector('.nav-bar').classList.add('animate');
   document.querySelector('.footer').classList.add('animate');
+  document.querySelector('.content').classList.add('animate');
 };
 
 
