@@ -45,11 +45,14 @@
     border-radius: 8px 8px 0 0;
   }
 
+  h1, h3{
+    font-family: 'LeagueScript', sans-serif;
+  }
+
 
   p{
       text-align: center !important;
       font-size: 100px;
-      font-family: 'Neocosmic', sans-serif;
   }
   .outline-text {
     color: white;
@@ -64,6 +67,7 @@
       height: 7%;
       background-color: #7a0000;
       overflow: hidden;
+
   }
 
   nav ol {
@@ -105,7 +109,10 @@
   <!-- Add your site or application content here -->
 
 
-  <nav style="position: sticky; top: 0; z-index: 100; background-color: var(--dark-cyan); border-radius: 0 0 8px 8px;" class="nav-bar">
+  <nav style="position: sticky; top: 0; z-index: 100; background-color: var(--dark-cyan); border-radius: 0 0 8px 8px; display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;" class="nav-bar">
+
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 24px;">
 
       <div style="font-family: 'Greater Theory', sans-serif; font-size: 23px; color: var(--celadon)" >Josephine Emenya</div>
@@ -122,11 +129,14 @@
   </nav>
 
 
-  <div style="background-image: url('img/img.png'); background-size: auto; background-repeat: no-repeat; background-position: top left; height: 70%;">
+  <div style="background-image: url('img/img.png'); background-size: auto; background-repeat: no-repeat; background-position: top left; height: 70%; display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;">
 
-    <div class="content" style="position: absolute; margin: 24px;  background-color: rgba(0, 0, 0, 0.6); color: white; width:30%; height: 60%; border-radius: 8px; background-position:  top left;" >
-      <h1 style=" margin: 28px;"><a href="https://www.linkedin.com/in/josieemenya/" target="_blank" style="color: var(--lavender-web); text-decoration: none; font-size: 56px;" ><span style="display: block;">Hello, I am Josephine Emenya</span></a></h1>
-      <p style="color: var(--dark-cyan); text-decoration: none; font-size: 16px; margin: 28px; float: left; position: relative"> wasssssssssssssssssssssup</p>
+    <div class="content" style="float:left; position: absolute; margin: 28px;  background-color: rgba(0, 0, 0, 0.6); color: white; width:30%; height: 60%; border-radius: 8px; background-position:  top left;" >
+      <h1 style=" margin: 28px;"><a href="https://www.linkedin.com/in/josieemenya/" target="_blank" style="color: var(--lavender-web); text-decoration: none; font-size: 44px;" >Hello, I am <span style="display: block; color: var(--celadon)">Josephine Emenya</span></a></h1>
+      <h3 style="color: var(--lavender-web); text-decoration: none; margin: 28px; float: left; position: relative; font-size: 32px;"> Aspiring Software Developer</h3>
+      <button class='focus-button' style="margin: 28px; background-color: var(--earth-yellow); color: var(--lavender-web); padding: 12px 20px; border-radius: 8px; cursor:pointer">All About Me</button>
     </div>
 
 

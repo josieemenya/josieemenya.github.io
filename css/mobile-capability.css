@@ -28,6 +28,19 @@
 }
 
 
+@font-face {
+  font-family: 'GoudyBookLetter';
+  src: url('/fonts/goudy-bookletter/GoudyBookletter1911.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'LeagueScript';
+  src: url('/fonts/LeagueMono-2.300/LeagueMono-2.300/static/OTF/LeagueMono-NarrowLight.otf');
+  font-weight: normal;
+}
+
+
 .socials {
   color: var(--eggshell);
 }
@@ -63,6 +76,11 @@
   100.00%     { background-color: hsla(38, 70%, 65%, .85); }
 }
 
+@keyframes yellow_fade {
+  0%   { background-color: hsla(38, 70%, 65%, 1); }
+  100% { background-color: hsla(0, 0%, 100%, 1); }
+}
+
 .nav-bar {
 
 }
@@ -94,4 +112,9 @@
 .content.animate {
   opacity: 1;
   transform: translateX(0);
+}
+
+.focus-button:hover {
+  transform: scale(1.1);
+  animation: yellow_fade 0.6s ease-out reverse;
 }
