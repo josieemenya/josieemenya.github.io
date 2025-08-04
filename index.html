@@ -140,6 +140,12 @@
     flex-shrink: 1;
   }
 
+  body > main, /* or your main content container */
+  body > .content {
+    padding-bottom: 60px;
+    box-sizing: border-box;
+  }
+
 
 </style>
 
@@ -239,7 +245,7 @@
 
 
 
-  <section id="section3" style="height:40%; background-color: var(--eerie-black); padding: 24px;">
+  <section id="section3" style="min-height:48%; background-color: var(--eerie-black); padding: 28px;">
     <h2 style="color: var(--celadon); font-family: 'Greater Theory', sans-serif">Get in Touch:</h2>
     <div style="  width: 300px;
       padding: 24px;
