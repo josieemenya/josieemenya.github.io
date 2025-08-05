@@ -1,31 +1,95 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
   <title>Josephine Emenya - Blog</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/mobile-capability.css">
-  <link rel="stylesheet" href="../css/colours.css">
-  <meta name="description" content="">
 
-  <meta property="og:title" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+<style>
+  .section-title {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+  }
 
-  <link rel="icon" href="/ico/Purin.ico" sizes="180x180">
-  <link rel="apple-touch-icon" href="../icon.png">
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+  }
 
-  <link rel="manifest" href="../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  .game-card {
+    background: #1e1e1e;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .game-info {
+    padding: 0.75rem;
+    background-color: #2b2b2b;
+  }
+
+  .game-info h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+  }
+
+  .game-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+
+</style>
 </head>
 
-</html>
-
 <body>
-  <h1>WIP WIP WIP</h1>
+<h2 class="section-title">🎮 My Game Library</h2>
+
+<div class="project-grid">
+  <div class="game-card" onclick="openModal('CyberCode', 'A cyberpunk-themed coding project.')">
+    <img src="https://source.unsplash.com/random/300x400?sig=10" alt="CyberCode">
+    <div class="game-info">
+      <h3>CyberCode</h3>
+      <p>🕹️ JS / HTML / CSS</p>
+    </div>
+  </div>
+
+  <div class="game-card" onclick="openModal('PixelRun', 'A pixel platformer I made in Godot.')">
+    <img src="https://source.unsplash.com/random/300x400?sig=11" alt="PixelRun">
+    <div class="game-info">
+      <h3>PixelRun</h3>
+      <p>🎮 Godot / GDScript</p>
+    </div>
+  </div>
+
+  <!-- More projects... -->
+</div>
+
+<script>
+  function openModal(title, description) {
+    // Fill in modal title and content
+    document.getElementById("modal-title").textContent = title;
+    document.getElementById("modal-body").textContent = description;
+    document.getElementById("modal").style.display = "flex";
+  }
+</script>
 </body>
+</html>
