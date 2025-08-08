@@ -2,189 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/colours.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/mobile-capability.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="The webpage featuring the portfolio of Josephine Emenya">
+  <meta name="keywords" content="Software, Developer">
+  <meta name="author" content="Josephine Emenya">
+
+  <meta property="og:title" content="Josephine Emenya - Blog">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://josephineemenya.co.uk/blog">
+  <meta property="og:image" content="../ico/Purin.ico">
+  <meta property="og:site_name" content="Josephine Emenya">
+  <link rel="icon" href="/ico/Purin.ico" sizes="180x180">
+
+
   <title>Josephine Emenya - Blog</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #fafafa;
-    }
 
-    h1 {
-      text-align: center;
-      margin: 1rem 0;
-    }
+<style>
 
-    .grid {
-      column-count: 3;
-      column-gap: 1rem;
-      max-width: 1200px;
-      margin: auto;
-      padding: 1rem;
-    }
+  body{
+    background-color: var(--eerie-black);
+  }
 
-    .card {
-      background: white;
-      margin: 0 0 1rem;
-      display: inline-block;
-      width: 100%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
+  .modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+  .modal-content {
+    background: #1e1e1e;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+  }
 
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
 
-    .card .content {
-      padding: 0.75rem;
-    }
 
-    .card .content h2 {
-      font-size: 1.1rem;
-      margin: 0;
-    }
+  .section-title {
+    font-family: 'Greater Theory', sans-serif;
+    color: var(--lavender-web);
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+  }
 
-    /* Modal styles */
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+  }
 
-    .modal-content {
-      background: white;
-      padding: 2rem;
-      max-width: 80vh;
-      max-height: 100vh;
-      width: 30%;
-      height: 50%;
-      overflow-y: scroll;
-      border-radius: 10px;
-      position: relative;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none;  /* IE/Edge */
-      scroll-behavior: smooth;
-    }
+  .game-card {
+    background: #1e1e1e;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
 
-    .modal-content::-webkit-scrollbar {
-      display: none;
-    }
+  .game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  }
 
-    #modal-video{
-      width: 100%;
-      height: 100%;
-      border-radius: 8px;
-      display: block;
-    }
+  .game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-    .modal-content h2 {
-      margin-top: 0;
-    }
+  .game-info {
+    padding: 0.75rem;
+    background-color: #2b2b2b;
+  }
 
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
+  .game-info h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+  }
 
-    .date{
-      float: right;
-      color: rgba(0, 0, 0, 0.5);
-      font-size: 12px;
-    }
+  .game-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
 
-    @media (max-width: 768px) {
-      .grid {
-        column-count: 2;
-      }
-    }
+  .back-button {
+    display: inline-block;
+    margin: 3rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+  }
 
-    @media (max-width: 480px) {
-      .grid {
-        column-count: 1;
-      }
-    }
-  </style>
+  .back-button:hover {
+    animation: button-hover 0.8s ease-in forwards;
+  }
+
+</style>
 </head>
+
 <body>
+<h2 class="section-title">Josephine's Project Library</h2>
 
-<h1>Pinterest-Style Blog</h1>
+<a href="../index.html" class="back-button">← Back</a>
 
-<div class="grid">
-  <div class="card" data-date="2025-08-05" onclick="openModal('Post Title 1', 'This is the full content of post 1.', 'https://www.youtube.com/embed/IcP7yc1sfHk?si=00Xs68atUZJflIAk')">
-    <img src="../img/heart.jpg" alt="Post 1">
-    <div class="content">
-      <h2>Post Title 1</h2>
-      <p class="date">Loading...</p>
+<div class="project-grid">
+  <div class="game-card" onclick="openModal('CyberCode', 'A cyberpunk-themed coding project.')">
+    <img src="https://source.unsplash.com/random/300x400?sig=10" alt="CyberCode">
+    <div class="game-info">
+      <h3>CyberCode</h3>
+      <p>🕹️ JS / HTML / CSS</p>
     </div>
   </div>
 
-  <div class="card" data-date="2025-08-05" onclick="openModal('Post Title 2', 'This is the full content of post 2.')">
-    <img src="https://source.unsplash.com/random/400x300?sig=2" alt="Post 2">
-    <div class="content">
-      <h2>Post Title 2</h2>
-      <p class="date">Loading...</p>
+  <div class="game-card" onclick="openModal('PixelRun', 'A pixel platformer I made in Godot.')">
+    <img src="https://source.unsplash.com/random/300x400?sig=11" alt="PixelRun">
+    <div class="game-info">
+      <h3>PixelRun</h3>
+      <p>🎮 Godot / GDScript</p>
     </div>
   </div>
 
-  <div class="card" data-date="2025-08-05" onclick="openModal('Post Title 3', 'This is the full content of post 3.')">
-    <img src="https://source.unsplash.com/random/400x300?sig=3" alt="Post 3">
-    <div class="content">
-      <h2>Post Title 3</h2>
-      <p class="date">Loading...</p>
-    </div>
-  </div>
-
-  <!-- Add more cards as needed -->
+  <!-- More blog... -->
 </div>
-
-<!-- Modal -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2 id="modal-title"></h2>
-    <p id="modal-body"></p>
-    <iframe id="modal-video"></iframe>
-  </div>
-</div>
+<script>
+  window.onload = function() {
+    document.querySelector('.section-title').classList.add('animate');
+    document.querySelector('.project-grid').classList.add('animate');
+  }
+</script>
 
 <script>
-  function openModal(title, body, iframeURL) {
-    document.getElementById('modal-title').textContent = title;
-    document.getElementById('modal-body').textContent = body;
-    document.getElementById('modal-video').src = iframeURL;
-    document.getElementById('modal').style.display = 'flex';
+  function openModal(title, description) {
+    const modalTitle = document.getElementById("modal-title");
+    const modalBody = document.getElementById("modal-body");
+    const modal = document.getElementById("modal");
+
+    if (modalTitle && modalBody && modal) {
+      modalTitle.textContent = title;
+      modalBody.textContent = description;
+      modal.style.display = "flex";
+    } else {
+      console.error("Modal elements not found!");
+    }
   }
 
   function closeModal() {
-    document.getElementById('modal-video').src = ''
-    document.getElementById('modal').style.display = 'none';
+    const modal = document.getElementById("modal");
+    if (modal) {
+      modal.style.display = "none";
+    }
   }
-
-  // Optional: Close modal on outside click
-  document.getElementById('modal').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-  });
 </script>
-<script src="../js/app.js"></script>
+
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2 id="modal-title">Modal Title</h2>
+    <p id="modal-body">Modal body goes here</p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+
+
 </body>
 </html>

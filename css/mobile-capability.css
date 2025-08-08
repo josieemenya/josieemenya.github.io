@@ -120,3 +120,27 @@
   transform: scale(1.1);
   animation: yellow_fade 0.6s ease-out reverse;
 }
+
+
+.section-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.section-title.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-grid {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.project-grid.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+

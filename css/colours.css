@@ -45,3 +45,16 @@
 }
 
 
+@keyframes button-hover {
+  0% {background-color: hsla(53, 67%, 5%, 1)}
+  10% {background-color: hsla(53, 67%, 5%, .8)}
+  20% {background-color: hsla(53, 67%, 5%, .6)}
+  30% {background-color: hsla(53, 67%, 5%, .4)}
+  40% {background-color: hsla(53, 67%, 5%, .2)}
+  50% {background-color: hsla(53, 67%, 5%, 0)}
+  60% {background-color: hsla(180, 38%, 39%, .2)}
+  70% {background-color: hsla(180, 38%, 39%, .4)}
+  80% {background-color: hsla(180, 38%, 39%, .6)}
+  90% {background-color: hsla(180, 38%, 39%, .8)}
+  100% {background-color: hsla(180, 38%, 39%, 1)}
+}
