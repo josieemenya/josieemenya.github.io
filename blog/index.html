@@ -50,6 +50,9 @@
 
     .card:hover {
       transform: translateY(-4px);
+      border: 2px solid var(--paynes-gray);
+      border-radius: 8px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card img {
@@ -143,15 +146,15 @@
 <h1>Blog Page</h1>
 
 <div class="grid">
-  <div class="card" data-date="2025-08-05" onclick="openModal('Post Title 1', 'This is the full content of post 1.', 'https://www.youtube.com/embed/IcP7yc1sfHk?si=00Xs68atUZJflIAk')">
-    <img src="../img/heart.jpg" alt="Post 1">
+  <div class="card" data-date="2025-08-05" onclick="openModal('Going Back To My Chip-8 emulator', 'This is the full content of post 1.', 'https://www.youtube.com/embed/IcP7yc1sfHk?si=00Xs68atUZJflIAk')">
+    <img src="../blog_src/img.png" alt="Post 1">
     <div class="content">
-      <h2>Post Title 1</h2>
+      <h2>Fixing up an Old Project</h2>
       <p class="date">Loading...</p>
     </div>
   </div>
 
-  <div class="card" data-date="2025-08-05" onclick="openModal('Post Title 2', 'This is the full content of post 2.')">
+  <div class="card" data-date="2025-08-05" onclick="openModal('Remaking an Old UE5 project', 'This is the full content of post 2.')">
     <img src="https://source.unsplash.com/random/400x300?sig=2" alt="Post 2">
     <div class="content">
       <h2>Post Title 2</h2>
@@ -159,7 +162,7 @@
     </div>
   </div>
 
-  <div class="card" data-date="2025-08-05" onclick="openModal('Post Title 3', 'This is the full content of post 3.')">
+  <div class="card" data-date="2025-08-05" onclick="openModal('An Update On My Text-Based Game Engine', 'This is the full content of post 3.')">
     <img src="https://source.unsplash.com/random/400x300?sig=3" alt="Post 3">
     <div class="content">
       <h2>Post Title 3</h2>
