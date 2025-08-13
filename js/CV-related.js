@@ -2,7 +2,7 @@
 
 
 function downloadCV() {
-  const pdfURL = '../resume/cv.pdf';
+  const pdfURL = '../resume/JosephineEmenyaDownloadableVer1.pdf';
 
   const link = document.createElement('a');
   link.href = pdfURL;

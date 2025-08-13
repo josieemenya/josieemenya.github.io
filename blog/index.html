@@ -21,6 +21,7 @@
       background: var(--eerie-black);
     }
 
+
     h1 {
       font-family: 'Greater Theory', sans-serif;
       text-align: center;
@@ -29,7 +30,7 @@
     }
 
     .grid {
-      column-count: 3;
+      column-count: 2;
       column-gap: 1rem;
       max-width: 1200px;
       margin: auto;
@@ -50,9 +51,6 @@
 
     .card:hover {
       transform: translateY(-4px);
-      border: 2px solid var(--paynes-gray);
-      border-radius: 8px;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card img {
@@ -63,6 +61,7 @@
 
     .card .content {
       padding: 0.75rem;
+
     }
 
     .card .content h2 {
@@ -97,6 +96,7 @@
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none;  /* IE/Edge */
       scroll-behavior: smooth;
+      white-space: pre-wrap;
     }
 
     .modal-content::-webkit-scrollbar {
@@ -124,9 +124,21 @@
 
     .date{
       float: right;
-      color: rgba(0, 0, 0, 0.5);
+      padding-right: 12px;
+      color: var(--paynes-gray);
       font-size: 12px;
     }
+
+    body.dark-mode .date {
+      color: #fff;
+    }
+
+
+    ul li img.tech_usd{
+        max-height: 50px;
+        max-width: 50px;
+    }
+
 
     @media (max-width: 768px) {
       .grid {
@@ -146,28 +158,45 @@
 <h1>Blog Page</h1>
 
 <div class="grid">
-  <div class="card" data-date="2025-08-05" onclick="openModal('Going Back To My Chip-8 emulator', 'This is the full content of post 1.', 'https://www.youtube.com/embed/IcP7yc1sfHk?si=00Xs68atUZJflIAk')">
+  <div class="card" data-date="2025-08-05" onclick="openModal(
+  'Going Back To My Chip-8 emulator', <!-- title -->
+  'A few weeks back, I had coded a CHIP-8 emulator from scratch. I technically coded it twice since the first time I had accidentally deleted it because I chased the aesthetics of a good looking filesystem and deleted my repository.\n\n' +
+   'The first time, I had a pixel rendering issue so the pixels game out garbled and coloured, which is not expected behaviour, while I was working to solve this I, again, accidentally deleted my repository, and had to start from scratch. ' +
+   'While I was annoyed that I had completely eroded my progress, I was curious to see if this time I could spot the issue with my first attempt, and I felt that I understood the project a bit more, only to get into another issue with the window crashing\n\n' +
+   'After hours of debugging and looking over my code, I realized that the bug-crashing offence, was a simple mistake in how I was creating the texture in SDL, I had been using the window width variable instead of the texture width.' +
+   'There was also a logical error on of the opcode which affected rendering, and finally, an incorrect reference to a file path with caused there to be an error with loading roms', <!-- post -->
+  'https://www.youtube.com/embed/IcP7yc1sfHk?si=00Xs68atUZJflIAk' )"> <!-- title -->
+
     <img src="../blog_src/img.png" alt="Post 1">
     <div class="content">
       <h2>Fixing up an Old Project</h2>
-      <p class="date">Loading...</p>
     </div>
+    <p class="date">Loading...</p>
+
   </div>
 
   <div class="card" data-date="2025-08-05" onclick="openModal('Remaking an Old UE5 project', 'This is the full content of post 2.')">
     <img src="https://source.unsplash.com/random/400x300?sig=2" alt="Post 2">
     <div class="content">
       <h2>Post Title 2</h2>
-      <p class="date">Loading...</p>
     </div>
+    <p class="date">Loading...</p>
   </div>
 
   <div class="card" data-date="2025-08-05" onclick="openModal('An Update On My Text-Based Game Engine', 'This is the full content of post 3.')">
     <img src="https://source.unsplash.com/random/400x300?sig=3" alt="Post 3">
     <div class="content">
       <h2>Post Title 3</h2>
-      <p class="date">Loading...</p>
     </div>
+      <p class="date">Loading...</p>
+  </div>
+
+  <div class="card" data-date="2025-08-11" onclick="openModal('Women Game Jam 2025' , 'This is the full content of post 3.')">
+    <img src="https://source.unsplash.com/random/400x300?sig=3" alt="Post 4">
+    <div class="content">
+      <h2>Post Title 3</h2>
+    </div>
+    <p class="date">Loading...</p>
   </div>
 
   <!-- Add more cards as needed -->

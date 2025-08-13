@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const diffTime = Math.abs(now - postDate);
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-    dateElem.textContent = `Made ${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
+    if (diffDays === 0) {
+      dateElem.textContent = "Made today";
+    } else {
+      dateElem.textContent = `Made ${diffDays} day${diffDays !== 1 ? "s" : ""} ago`;
+    }
   });
 });
