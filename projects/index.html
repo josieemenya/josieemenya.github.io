@@ -45,7 +45,7 @@
     color: white;
     padding: 2rem;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 800px;
     width: 90%;
     text-align: center;
   }
@@ -70,6 +70,9 @@
   }
 
   .game-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: #1e1e1e;
     color: white;
     border-radius: 12px;
@@ -86,7 +89,7 @@
 
   .game-card img {
     width: 100%;
-    height: auto;
+    height: 120px;
     display: block;
   }
 
@@ -131,24 +134,54 @@
 <a href="../index.html" class="back-button">← Back</a>
 
 <div class="project-grid">
-  <div class="game-card" onclick="openModal('CyberCode', 'A cyberpunk-themed coding project.')">
-    <img src="https://source.unsplash.com/random/300x400?sig=10" alt="CyberCode">
+  <div class="game-card" onclick="openModal('FarmDefense', 'A farm simulator with tower defense elements made in Unreal Engine 5.')">
+    <img src="../project_src/FD2.png" alt="FarmDefense"/>
     <div class="game-info">
-      <h3>CyberCode</h3>
-      <p>🕹️ JS / HTML / CSS</p>
+      <h3>Farm Defense</h3>
+      <p>UE5 / C++ / Blueprints</p>
     </div>
   </div>
 
-  <div class="game-card" onclick="openModal('PixelRun', 'A pixel platformer I made in Godot.')">
-    <img src="https://source.unsplash.com/random/300x400?sig=11" alt="PixelRun">
+  <div class="game-card" onclick="openModal('Polterguest', 'A point and click puzzle game I helped make in Godot.', '/project_src/Polterguest/index.html','game')">
+    <img src="../project_src/Polterguest-img.png" alt="Polterguest"/>
     <div class="game-info">
-      <h3>PixelRun</h3>
+      <h3>Polterguest</h3>
       <p>🎮 Godot / GDScript</p>
     </div>
   </div>
 
+  <div class="game-card" onclick="openModal('Nylaipin', 'An exploration game I helped to develop in Unreal Engine 5.', 'https://itch.io/embed/3175312','itchio')">
+    <img src="../project_src/nylapin.png" alt="Nylaipin"/>
+    <!-- http://bit.ly/nylaipin -->
+    <div class="game-info">
+      <h3>Nylaipin</h3>
+      <p>🎮 UE5 / Blueprints</p>
+    </div>
+
+    <!--<div class="game-card" onclick="openModal('Text-Tiles', 'A text-based game engine I made using SDL, ImGui and OpenGL.', 'https://itch.io/embed/3175312','itchio')">
+      <img src="../project_src/nylapin.png" alt="Nylaipin"/>
+
+      <div class="game-info">
+        <h3>Nylaipin</h3>
+        <p>🎮 UE5 / Blueprints</p>
+      </div>
+    </div>
+
+    <div class="game-card" onclick="openModal('Nylaipin', 'An exploration game I helped to develop in Unreal Engine 5.', 'https://itch.io/embed/3175312','itchio')">
+      <img src="../project_src/nylapin.png" alt="Nylaipin"/>
+      <div class="game-info">
+        <h3>Nylaipin</h3>
+        <p>🎮 UE5 / Blueprints</p>
+      </div>
+    </div>
+  -->
+
+
+  </div>
+
   <!-- More blog... -->
 </div>
+<script src="../js/project_functionality.js"></script>
 <script>
   window.onload = function() {
     document.querySelector('.section-title').classList.add('animate');
@@ -157,7 +190,7 @@
 </script>
 
 <script>
-  function openModal(title, description) {
+  function openModal(title, description, source, type = null) {
     const modalTitle = document.getElementById("modal-title");
     const modalBody = document.getElementById("modal-body");
     const modal = document.getElementById("modal");
@@ -169,6 +202,7 @@
     } else {
       console.error("Modal elements not found!");
     }
+    checkSource(modal, source, type, modalBody)
   }
 
   function closeModal() {

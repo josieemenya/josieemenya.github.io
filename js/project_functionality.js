@@ -53,3 +53,70 @@ if (window.innerWidth <= 768) {
     </div>
   `
 }
+
+function checkSource(modal, source, type, modalBody){
+  if (source) {
+    let element;
+
+    const guessedType = type || (() => {
+      if (/\.(jpg|jpeg|png|gif|webp)$/i.test(source)) return "image";
+      if (/\.(mp4|webm|ogg)$/i.test(source)) return "video";
+      if (source.includes("itch.io")) return "itchio";
+      if (/\.html$/i.test(source)) return "game";
+      return "iframe";
+    })();
+
+    switch (guessedType) {
+      case "image":
+        element = document.createElement("img");
+        element.src = source;
+        element.style.maxWidth = "100%";
+        element.style.height = "auto";
+        break;
+
+      case "video":
+        element = document.createElement("video");
+        element.src = source;
+        element.controls = true;
+        element.style.maxWidth = "100%";
+        break;
+
+      case "game":
+        element = document.createElement("iframe");
+        element.src = source;
+        element.width = "100%";
+        element.height = "600";
+        element.style.border = "none";
+        element.setAttribute("allowfullscreen", "");
+        element.setAttribute("allow", "autoplay; fullscreen; gamepad;");
+        break;
+
+      case "itchio":
+        element = document.createElement("iframe");
+        // Use itch.io's official embed URL, not the main game page
+        // Example: "https://itch.io/embed/123456?bg_color=000000"
+        element.src = source;
+        element.width = "100%";
+        element.height = "600";
+        element.style.border = "0";
+        element.setAttribute("allowfullscreen", "");
+        element.setAttribute("allow", "autoplay; fullscreen; gamepad;");
+        break;
+
+      case "iframe":
+      default:
+        element = document.createElement("iframe");
+        element.src = source;
+        element.width = "100%";
+        element.height = "315";
+        element.style.border = "none";
+        element.setAttribute("frameborder", "0");
+        element.setAttribute("allowfullscreen", "");
+        break;
+    }
+
+    modalBody.appendChild(element);
+  }
+
+  modal.style.display = "flex";
+}
