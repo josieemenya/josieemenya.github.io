@@ -139,6 +139,22 @@
         max-width: 50px;
     }
 
+    .back-button {
+      display: inline-block;
+      margin: 3rem;
+      padding: 0.5rem 1rem;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .back-button:hover {
+      animation: button-hover 0.8s ease-in forwards;
+    }
+
 
     @media (max-width: 768px) {
       .grid {
@@ -156,6 +172,8 @@
 <body>
 
 <h1>Blog Page</h1>
+
+<a href="../index.html" class="back-button">← Back</a>
 
 <div class="grid">
   <div class="card" data-date="2025-08-05" onclick="openModal(
