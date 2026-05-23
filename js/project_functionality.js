@@ -45,14 +45,14 @@ window.onload = function () {
 };
 
 
-if (window.innerWidth <= 768) {
+/*if (window.innerWidth <= 768) {
   document.getElementById('mobile-warning').style.display = 'block';
   document.querySelector('#mobile-warning').innerHTML= `
     <div style="color: hsla{0, 0, 0, .9}">
         <h1>Best Viewed on a PC device</h1>
     </div>
   `
-}
+}*/
 
 function checkSource(modal, source, type, modalBody){
   if (source) {
