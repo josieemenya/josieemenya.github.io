@@ -41,7 +41,7 @@ customElements.define('project-card', ProjectCard);
 window.onload = function () {
   document.querySelector('.nav-bar').classList.add('animate');
   document.querySelector('.footer').classList.add('animate');
-  document.querySelector('.content').classList.add('animate');
+  //document.querySelector('.content').classList.add('animate');
 };
 
 
@@ -54,7 +54,7 @@ window.onload = function () {
   `
 }*/
 
-function checkSource(modal, source, type, modalBody){
+function checkSource(modal, source, type, modalBody, externallink = null) {
   if (source) {
     let element;
 
@@ -88,19 +88,15 @@ function checkSource(modal, source, type, modalBody){
         element.height = "600";
         element.style.border = "none";
         element.setAttribute("allowfullscreen", "");
-        element.setAttribute("allow", "autoplay; fullscreen; gamepad;");
         break;
 
       case "itchio":
         element = document.createElement("iframe");
-        // Use itch.io's official embed URL, not the main game page
-        // Example: "https://itch.io/embed/123456?bg_color=000000"
         element.src = source;
         element.width = "100%";
         element.height = "600";
         element.style.border = "0";
         element.setAttribute("allowfullscreen", "");
-        element.setAttribute("allow", "autoplay; fullscreen; gamepad;");
         break;
 
       case "iframe":
@@ -110,7 +106,6 @@ function checkSource(modal, source, type, modalBody){
         element.width = "100%";
         element.height = "315";
         element.style.border = "none";
-        element.setAttribute("frameborder", "0");
         element.setAttribute("allowfullscreen", "");
         break;
     }
@@ -118,5 +113,40 @@ function checkSource(modal, source, type, modalBody){
     modalBody.appendChild(element);
   }
 
+  console.log("externallink =", externallink);
+
+  if (externallink) {
+    const linkBtn = document.createElement("a");
+    linkBtn.href = externallink;
+    linkBtn.target = "_blank";
+    linkBtn.rel = "noopener noreferrer";
+    linkBtn.textContent = "View Project";
+
+    linkBtn.style.display = "inline-block";
+    linkBtn.style.marginTop = "16px";
+    linkBtn.style.padding = "12px 20px";
+    linkBtn.style.backgroundColor = "var(--paynes-gray)";
+    linkBtn.style.color = "white";
+    linkBtn.style.textDecoration = "none";
+    linkBtn.style.borderRadius = "8px";
+
+    modalBody.appendChild(linkBtn);
+  }
+
   modal.style.display = "flex";
+}
+
+
+function openModal(title, description, source, type, externallink = null) {
+  const modal = document.getElementById("project-modal");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDescription = document.getElementById("modal-description");
+  const modalBody = document.getElementById("modal-body");
+
+  modalTitle.textContent = title;
+  modalDescription.textContent = description;
+
+  modalBody.innerHTML = "";
+
+  checkSource(modal, source, type, modalBody, externallink);
 }

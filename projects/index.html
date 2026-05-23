@@ -153,7 +153,6 @@
 
   <div class="game-card" onclick="openModal('Nylaipin', 'An exploration game I helped to develop in Unreal Engine 5.', 'https://itch.io/embed/3175312','itchio')">
     <img src="../project_src/nylapin.png" alt="Nylaipin"/>
-    <!-- http://bit.ly/nylaipin -->
     <div class="game-info">
       <h3>Nylaipin</h3>
       <p>🎮 UE5 / Blueprints</p>
@@ -162,7 +161,6 @@
 
     <div class="game-card" onclick="openModal('bombdotcom - WIP!', 'A bomberman clone made in PICO-8.', '/My-PICO8-projects/projectfile/index.html','game')">
       <img src="../project_src/bombdot.png" alt="bombdotcom"/>
-      <!-- http://bit.ly/nylaipin -->
       <div class="game-info">
         <h3>bombdotcom</h3>
         <p>🎮 PICO-8 / Lua</p>
@@ -170,11 +168,42 @@
     </div>
 
   <div class="game-card" onclick="openModal('TextTiles - WIP!', 'A Text-based game engine I am making, Made with SDL3, imgui and opengl, the playable web version here was made with SDL2 for browser support and is a little outdated than the executable version.\n\n Also, the thumbnail, is not neccesarily related to the project itself, but it was the inspiraion behind it.\n\n' + 'The link to the github repo : https://github.com/josieemenya/text-based-game_engine' , '/project_src/TextTiles/text-tiles.html','game')">
-    <img src="../project_src/TextTiles/FYOTBG.jpg" alt="inspo_pic"/>
-    <!-- http://bit.ly/nylaipin -->
+    <img src="../project_src/TextTiles/FYOTBG.jpg" alt="inspfo_pic"/>
     <div class="game-info">
       <h3>TextTiles</h3>
       <p>SDL3 / ImGui / OpenGL3</p>
+    </div>
+  </div>
+
+  <div class="game-card" onclick="openModal('Prison Break', 'A Game I made for the Develop At Ubisoft Mentorship. It focuses heavily on AI techniques such as Utility AI and GOAP and also gameplay programming mechanics such as an inventory + crafting system, reactive animations and a routine system. \n\n Furthermore, it features UI programming like the hot bar UI, minimal inventory and crafting UI, and other things for vfx. \n\n Overall, it was a very fun project driven by technical curiosity and spurred me to create a plugin based on my technique.' , 'https://www.youtube.com/embed/wE2kB2wrHNE?si=oqq0mYcj9TFj-DCB','iframe')">
+    <img src="../project_src/PB/PB.png" alt="inspgo_pic"/>
+    <div class="game-info">
+      <h3>Prison Break</h3>
+      <p>UE5 / C++ / Blueprints </p>
+    </div>
+  </div>
+
+  <div class="game-card" onclick="openModal('Debts&Dragons', 'A game made in unity for The Indie Game Academy gamejam!', 'https://itch.io/embed/3938100','itchio')">
+    <img src="../project_src/D&D/D&D.jpg" alt="inspso_pic"/>
+    <div class="game-info">
+      <h3>Debts And Dragons</h3>
+      <p>Unity / C#</p>
+    </div>
+  </div>
+
+  <div class="game-card" onclick="openModal('GOAP Plugin', 'A plugin I developed inspired by the techniques I learned through my Ubisoft Mentorship Program. \n\n It is designed to make the architecture of a GOAP system more Designer Friendly. It also features an Example Controller Class for those who only want to customize Goals and Actions and then drop it on an AI.\n\n' , null, null, 'https://fab.com/s/31277fbed2f9')">
+    <img src="../project_src/GP/GP.png" alt="infspo_pic"/>
+    <div class="game-info">
+      <h3>GOAP Plugin</h3>
+      <p>C++ / UE5</p>
+    </div>
+  </div>
+
+  <div class="game-card" onclick="openModal('GOAP Plugin Documentation!',  'Documentation I made for the GOAP Plugin. To have the plugin hosted on Fab. I needed to have extensive documentation. It could have been a simple PDF but I wanted to follow my technical curiosity and challenge myself to really deliver on technical writing, from inspirations from other documentation I was able to make the documentation for the plugin we see today.','https://josephineemenya.co.uk/goap-plugin-docs','iframe')">
+    <img src="../project_src/GPD/GPD.png" alt="inswpo_pic"/>
+    <div class="game-info">
+      <h3>GOAP Plugin Documentation</h3>
+      <p>MkDocs / Markdown / HTML</p>
     </div>
   </div>
 
@@ -192,7 +221,7 @@
 </script>
 
 <script>
-  function openModal(title, description, source, type = null) {
+  function openModal(title, description, source, type = null, externallink = null) {
     const modalTitle = document.getElementById("modal-title");
     const modalBody = document.getElementById("modal-body");
     const modal = document.getElementById("modal");
@@ -204,7 +233,8 @@
     } else {
       console.error("Modal elements not found!");
     }
-    checkSource(modal, source, type, modalBody)
+
+    checkSource(modal, source, type, modalBody, externallink);
   }
 
   function closeModal() {
