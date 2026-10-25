@@ -7,7 +7,7 @@ hamburger.addEventListener('click', () => {
 })
 
 function downloadCV() {
-  const pdfURL = '../resume/JosephineEmenyaCVMay1.pdf';
+  const pdfURL = '../resume/game-programmer-josephine.pdf';
 
   const link = document.createElement('a');
   link.href = pdfURL;

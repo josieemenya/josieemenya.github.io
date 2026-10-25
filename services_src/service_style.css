@@ -1,0 +1,41 @@
+body
+{
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #1B1725;
+}
+
+h1 {
+  color: antiquewhite;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  margin: 3rem;
+  padding: 0.5rem 1rem;
+  background-color: #111;
+  color: #5d737e;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #5d737e;
+  color: white;
+}
+
+.saas_wrap {
+  background: rgba(242, 244, 243, 0.50);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  margin: 24px ;
+  border-radius: 5px;
+}
+
+.freelancing_wrap {
+
+}
